@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Simulate search delay
                     setTimeout(() => {
                         // Update with new "filtered" count (this would be dynamic in a real app)
-                        countElement.textContent = `We have ${Math.floor(Math.random() * 100) + 1} opportunities matching "${searchTerm}"`;
+                        countElement.textContent = `We found ${Math.floor(Math.random() * 100) + 1} jobs matching "${searchTerm}"`;
                         
                         // Add clear search option
                         const clearSearch = document.createElement('button');
@@ -261,8 +261,79 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Simulate loading delay
                     setTimeout(() => {
-                        // Restore original content - in a real app, you would update with new data
-                        matchingResults.innerHTML = document.querySelector('.matching-results').innerHTML;
+                        // In a real app, you would dynamically generate new matches based on the selected job
+                        // Here we just restore the original content
+                        matchingResults.innerHTML = `
+                            <div class="match-stats">
+                                <div class="stat-card">
+                                    <div class="stat-number">47</div>
+                                    <div class="stat-label">Total Matches</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">High Matches (>90%)</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">23</div>
+                                    <div class="stat-label">Medium Matches</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">Low Matches</div>
+                                </div>
+                            </div>
+                            
+                            <h3>Top Candidates</h3>
+                            <div class="candidate-list">
+                                <div class="candidate-card">
+                                    <div class="candidate-info">
+                                        <div class="candidate-photo">
+                                            <img src="https://via.placeholder.com/50" alt="Candidate Photo">
+                                        </div>
+                                        <div class="candidate-details">
+                                            <h4>Sarah Johnson</h4>
+                                            <p>5 years experience • React, TypeScript, JavaScript</p>
+                                        </div>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="match-percentage">95%</div>
+                                        <div class="match-label">Match</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="candidate-card">
+                                    <div class="candidate-info">
+                                        <div class="candidate-photo">
+                                            <img src="https://via.placeholder.com/50" alt="Candidate Photo">
+                                        </div>
+                                        <div class="candidate-details">
+                                            <h4>Michael Chen</h4>
+                                            <p>7 years experience • React, Redux, JavaScript</p>
+                                        </div>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="match-percentage">92%</div>
+                                        <div class="match-label">Match</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="candidate-card">
+                                    <div class="candidate-info">
+                                        <div class="candidate-photo">
+                                            <img src="https://via.placeholder.com/50" alt="Candidate Photo">
+                                        </div>
+                                        <div class="candidate-details">
+                                            <h4>Emily Rodriguez</h4>
+                                            <p>4 years experience • React, Node.js, TypeScript</p>
+                                        </div>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="match-percentage">88%</div>
+                                        <div class="match-label">Match</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
                     }, 1500);
                 }
             }
@@ -359,4 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // Set the dashboard as active by default on page load
+    document.querySelector('.sidebar-icon[data-feature="dashboard"]').click();
 });

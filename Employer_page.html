@@ -4,410 +4,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobSensei – Employer Hub | Smart Hiring Platform</title>
-    <meta name="description" content="Post jobs, match candidates, and manage hiring — all powered by AI">
+    <title>JobSensei - Employer Hub</title>
     <link rel="stylesheet" href="Employer.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span>JobSensei</span>
-                </div>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-buttons">
-                    <a href="#" class="btn btn-secondary">Log in</a>
-                    <a href="#" class="btn btn-primary">Sign up</a>
-                </div>
-                <button class="mobile-nav-toggle">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
+    <!-- Main Layout -->
     <main>
-        <!-- Main content area -->
+        <!-- Primary Sidebar (left) -->
         <div class="sidebar">
             <div class="sidebar-logo">
-                <a href="#"><h1>J</h1></a>
+                <h1>JS</h1>
             </div>
-            <div class="sidebar-nav">
-                <a href="#" class="sidebar-icon active" data-feature="opportunity-discovery"><i class="fas fa-bullseye"></i><span class="tooltip">Opportunity Discovery</span></a>
-                <a href="#" class="sidebar-icon" data-feature="create-job-posts"><i class="fas fa-file-plus"></i><span class="tooltip">Create Job Posts</span></a>
-                <a href="#" class="sidebar-icon" data-feature="candidate-matching"><i class="fas fa-robot"></i><span class="tooltip">Candidate Matching (AI)</span></a>
-                <a href="#" class="sidebar-icon" data-feature="filter-skills"><i class="fas fa-filter"></i><span class="tooltip">Filter by Skill & Location</span></a>
-                <a href="#" class="sidebar-icon" data-feature="manage-applications"><i class="fas fa-folder"></i><span class="tooltip">Manage Applications</span></a>
-                <a href="#" class="sidebar-icon" data-feature="interview-scheduler"><i class="fas fa-calendar"></i><span class="tooltip">Interview Scheduler</span></a>
-                <a href="#" class="sidebar-icon"><i class="fas fa-cog"></i><span class="tooltip">Settings</span></a>
-                <a href="#" class="sidebar-icon"><i class="fas fa-chart-bar"></i><span class="tooltip">Analytics</span></a>
-                <a href="#" class="sidebar-icon"><i class="fas fa-bell"></i><span class="tooltip">Notifications</span></a>
-            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-icon" data-feature="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span class="tooltip">Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="job-posts">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="tooltip">Create Job Posts</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="candidate-matching">
+                    <i class="fas fa-users"></i>
+                    <span class="tooltip">Candidate Matching</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="filter-skills">
+                    <i class="fas fa-filter"></i>
+                    <span class="tooltip">Filter by Skill & Location</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="applications">
+                    <i class="fas fa-folder-open"></i>
+                    <span class="tooltip">Manage Applications</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="interviews">
+                    <i class="fas fa-calendar"></i>
+                    <span class="tooltip">Interview Scheduler</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="tooltip">Notifications</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="tooltip">Analytics</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="bookmarks">
+                    <i class="fas fa-bookmark"></i>
+                    <span class="tooltip">Bookmarks</span>
+                </a>
+                <a href="#" class="sidebar-icon" data-feature="settings">
+                    <i class="fas fa-cog"></i>
+                    <span class="tooltip">Settings</span>
+                </a>
+            </nav>
         </div>
 
+        <!-- Secondary Sidebar (middle) -->
+        <div class="secondary-sidebar">
+            <button class="back-button">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <h2 class="feature-title">Dashboard</h2>
+            
+            <!-- Dashboard Menu -->
+            <ul class="program-nav" id="dashboard-menu">
+                <li class="active"><a href="#">Overview</a></li>
+                <li><a href="#">Quick Actions</a></li>
+                <li><a href="#">Recent Activity</a></li>
+                <li><a href="#">Hiring Statistics</a></li>
+            </ul>
+            
+            <!-- Job Posts Menu -->
+            <ul class="program-nav" id="job-posts-menu" style="display: none;">
+                <li class="active"><a href="#">Create New Job</a></li>
+                <li><a href="#">Active Listings</a></li>
+                <li><a href="#">Draft Jobs</a></li>
+                <li><a href="#">Job Templates</a></li>
+            </ul>
+            
+            <!-- Candidate Matching Menu -->
+            <ul class="program-nav" id="candidate-matching-menu" style="display: none;">
+                <li class="active"><a href="#">Match Candidates</a></li>
+                <li><a href="#">AI Recommendations</a></li>
+                <li><a href="#">Saved Matches</a></li>
+                <li><a href="#">Match Settings</a></li>
+            </ul>
+
+            <!-- Filter by Skills Menu -->
+            <ul class="program-nav" id="filter-skills-menu" style="display: none;">
+                <li class="active"><a href="#">Skills Filter</a></li>
+                <li><a href="#">Location Search</a></li>
+                <li><a href="#">Saved Filters</a></li>
+                <li><a href="#">Advanced Search</a></li>
+            </ul>
+
+            <!-- Manage Applications Menu -->
+            <ul class="program-nav" id="applications-menu" style="display: none;">
+                <li class="active"><a href="#">All Applications</a></li>
+                <li><a href="#">Screening</a></li>
+                <li><a href="#">Interview Stage</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Rejected</a></li>
+            </ul>
+
+            <!-- Interview Scheduler Menu -->
+            <ul class="program-nav" id="interviews-menu" style="display: none;">
+                <li class="active"><a href="#">Calendar View</a></li>
+                <li><a href="#">Schedule Interview</a></li>
+                <li><a href="#">Upcoming Interviews</a></li>
+                <li><a href="#">Past Interviews</a></li>
+            </ul>
+            
+            <!-- Notifications Menu -->
+            <ul class="program-nav" id="notifications-menu" style="display: none;">
+                <li class="active"><a href="#">All Notifications</a></li>
+                <li><a href="#">Unread</a></li>
+                <li><a href="#">Application Updates</a></li>
+                <li><a href="#">System Alerts</a></li>
+            </ul>
+            
+            <!-- Analytics Menu -->
+            <ul class="program-nav" id="analytics-menu" style="display: none;">
+                <li class="active"><a href="#">Hiring Overview</a></li>
+                <li><a href="#">Job Performance</a></li>
+                <li><a href="#">Candidate Sources</a></li>
+                <li><a href="#">Time-to-Hire</a></li>
+                <li><a href="#">Custom Reports</a></li>
+            </ul>
+            
+            <!-- Bookmarks Menu -->
+            <ul class="program-nav" id="bookmarks-menu" style="display: none;">
+                <li class="active"><a href="#">Saved Candidates</a></li>
+                <li><a href="#">Saved Jobs</a></li>
+                <li><a href="#">Saved Searches</a></li>
+            </ul>
+            
+            <!-- Settings Menu -->
+            <ul class="program-nav" id="settings-menu" style="display: none;">
+                <li class="active"><a href="#">Account Settings</a></li>
+                <li><a href="#">Company Profile</a></li>
+                <li><a href="#">Team Management</a></li>
+                <li><a href="#">Notifications Settings</a></li>
+                <li><a href="#">Integration</a></li>
+                <li><a href="#">Billing</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area (right) -->
         <div class="content-wrapper">
-            <div class="secondary-sidebar">
-                <button class="back-button">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="feature-title">Opportunity Discovery</div>
-                <ul class="program-nav" id="opportunity-discovery-menu">
-                    <li class="active"><a href="#">All programs</a></li>
-                    <li><a href="#">My programs</a></li>
-                    <li><a href="#">Bookmarks</a></li>
-                    <li><a href="#">Pending Invitations</a></li>
-                    <li><a href="#">Collaboration</a></li>
-                </ul>
-                
-                <ul class="program-nav" id="create-job-posts-menu" style="display: none;">
-                    <li class="active"><a href="#">New Job Post</a></li>
-                    <li><a href="#">Draft Posts</a></li>
-                    <li><a href="#">Published Jobs</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">Job Analytics</a></li>
-                </ul>
-                
-                <ul class="program-nav" id="candidate-matching-menu" style="display: none;">
-                    <li class="active"><a href="#">AI Matching</a></li>
-                    <li><a href="#">Candidate Pool</a></li>
-                    <li><a href="#">Match Settings</a></li>
-                    <li><a href="#">Saved Matches</a></li>
-                    <li><a href="#">Match History</a></li>
-                </ul>
-                
-                <ul class="program-nav" id="filter-skills-menu" style="display: none;">
-                    <li class="active"><a href="#">Skill Database</a></li>
-                    <li><a href="#">Location Search</a></li>
-                    <li><a href="#">Filter Presets</a></li>
-                    <li><a href="#">Custom Filters</a></li>
-                    <li><a href="#">Recent Searches</a></li>
-                </ul>
-                
-                <ul class="program-nav" id="manage-applications-menu" style="display: none;">
-                    <li class="active"><a href="#">All Applications</a></li>
-                    <li><a href="#">Shortlisted</a></li>
-                    <li><a href="#">In Process</a></li>
-                    <li><a href="#">Rejected</a></li>
-                    <li><a href="#">Hired</a></li>
-                </ul>
-                
-                <ul class="program-nav" id="interview-scheduler-menu" style="display: none;">
-                    <li class="active"><a href="#">Calendar</a></li>
-                    <li><a href="#">Schedule Interview</a></li>
-                    <li><a href="#">Upcoming Interviews</a></li>
-                    <li><a href="#">Past Interviews</a></li>
-                    <li><a href="#">Interview Templates</a></li>
-                </ul>
-            </div>
-
             <div class="main-content">
-                <!-- Feature content sections -->
-                <div class="feature-content" id="opportunity-discovery-content">
-                    <div class="main-header">
-                        <p class="subtitle">Find the best opportunities for your skills and wallet</p>
-                        <h1 class="main-title">Opportunity Discovery</h1>
-                    </div>
-
+                <!-- Dashboard Content -->
+                <div class="feature-content" id="dashboard-content">
+                    <header class="main-header">
+                        <div class="subtitle">Welcome back</div>
+                        <h1 class="main-title">Employer Dashboard</h1>
+                    </header>
+                    
                     <div class="search-container">
                         <div class="opportunity-count">
-                            <h3>We have 461 opportunities for you</h3>
+                            <h3>You have 12 active job postings</h3>
                         </div>
                         
                         <div class="search-filters">
                             <div class="search-box">
                                 <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Search for programs">
+                                <input type="text" placeholder="Search for jobs, candidates, or applications...">
                             </div>
-
+                            
                             <div class="filter-group">
                                 <div class="filter-dropdown">
-                                    <span>Program type</span>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle">
-                                            All programs <i class="fas fa-chevron-down"></i>
-                                        </button>
-                                    </div>
+                                    <span>Job Status</span>
+                                    <button class="dropdown-toggle">
+                                        All Jobs
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
                                 </div>
-
+                                
                                 <div class="filter-dropdown">
-                                    <span>Asset type</span>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle">
-                                            All assets <i class="fas fa-chevron-down"></i>
-                                        </button>
-                                    </div>
+                                    <span>Date Posted</span>
+                                    <button class="dropdown-toggle">
+                                        Last 30 Days
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
                                 </div>
-
+                                
                                 <div class="filter-dropdown">
-                                    <span>Industry</span>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle">
-                                            All industries <i class="fas fa-chevron-down"></i>
-                                        </button>
-                                    </div>
+                                    <span>Job Type</span>
+                                    <button class="dropdown-toggle">
+                                        All Types
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
                                 </div>
-
-                                <button class="search-button">Search</button>
                             </div>
+                            
+                            <button class="search-button">Search</button>
                         </div>
                     </div>
-
+                    
                     <div class="tags-container">
-                        <div class="tags-label">Popular now</div>
+                        <div class="tags-label">Quick Filters:</div>
                         <div class="tags">
-                            <a href="#" class="tag">BBP</a>
-                            <a href="#" class="tag">Domain</a>
-                            <a href="#" class="tag">Internet & Online Services</a>
-                            <a href="#" class="tag">Flipkart</a>
+                            <a href="#" class="tag">Needs Review</a>
+                            <a href="#" class="tag">New Applications</a>
+                            <a href="#" class="tag">Interviews Today</a>
+                            <a href="#" class="tag">Expiring Soon</a>
                         </div>
                     </div>
-
-                    <div class="section-header">
-                        <h2>Campaigns & top-paying opportunities</h2>
-                        <span class="info-icon"><i class="fas fa-info-circle"></i></span>
-                    </div>
-
+                    
+                    <header class="section-header">
+                        <h2>Recent Job Postings</h2>
+                        <i class="fas fa-info-circle info-icon"></i>
+                    </header>
+                    
                     <div class="cards-container">
-                        <!-- Card 1 -->
                         <div class="opportunity-card">
                             <div class="card-header">
                                 <div class="company-info">
                                     <div class="company-logo">
-                                        <img src="https://placehold.co/40x40/4fc2d6/0a1921?text=B&font=open-sans" alt="Bykea">
+                                        <img src="https://via.placeholder.com/40" alt="Company Logo">
                                     </div>
-                                    <span class="company-name">Bykea</span>
+                                    <div class="company-name">Your Company</div>
                                 </div>
                                 <div class="card-actions">
-                                    <button class="action-button"><i class="far fa-star"></i></button>
-                                    <button class="action-button"><i class="fas fa-ellipsis-v"></i></button>
+                                    <button class="action-button">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <button class="action-button">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="badge">Campaign</div>
-                                <h3 class="program-title">Bug Bounty Program</h3>
-                                <p class="program-details">Retesting, Collaboration</p>
-                                
+                                <div class="badge">Senior Level</div>
+                                <h3 class="program-title">Senior Frontend Developer</h3>
+                                <p class="program-details">Remote • Full-time • Posted 2 days ago</p>
                                 <div class="program-tags">
-                                    <span class="program-tag">Domain <span class="tag-count">7</span></span>
-                                    <span class="program-tag">Wildcard <span class="tag-count">6</span></span>
-                                    <span class="program-tag">AndroidPlayStore <span class="tag-count">2</span></span>
-                                    <span class="program-tag">IosAppStore <span class="tag-count">1</span></span>
+                                    <div class="program-tag">React <span class="tag-count">4</span></div>
+                                    <div class="program-tag">TypeScript <span class="tag-count">3</span></div>
+                                    <div class="program-tag">JavaScript <span class="tag-count">6</span></div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Card 2 -->
+                        
                         <div class="opportunity-card">
                             <div class="card-header">
                                 <div class="company-info">
                                     <div class="company-logo">
-                                        <img src="https://placehold.co/40x40/333/fff?text=EG&font=open-sans" alt="Epic Games">
+                                        <img src="https://via.placeholder.com/40" alt="Company Logo">
                                     </div>
-                                    <span class="company-name">Epic Games</span>
+                                    <div class="company-name">Your Company</div>
                                 </div>
                                 <div class="card-actions">
-                                    <button class="action-button"><i class="far fa-star"></i></button>
-                                    <button class="action-button"><i class="fas fa-ellipsis-v"></i></button>
+                                    <button class="action-button">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <button class="action-button">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="badge">Campaign</div>
-                                <h3 class="program-title">Bug Bounty Program</h3>
-                                <p class="program-details">Triaged by HackerOne, Retesting, Collaboration</p>
-                                
+                                <div class="badge">Mid Level</div>
+                                <h3 class="program-title">UX/UI Designer</h3>
+                                <p class="program-details">New York • Full-time • Posted 1 week ago</p>
                                 <div class="program-tags">
-                                    <span class="program-tag">Domain <span class="tag-count">58</span></span>
-                                    <span class="program-tag">Executable <span class="tag-count">9</span></span>
-                                    <span class="program-tag">OtherAsset <span class="tag-count">4</span></span>
-                                    <span class="program-tag">Wildcard <span class="tag-count">2</span></span>
+                                    <div class="program-tag">Figma <span class="tag-count">5</span></div>
+                                    <div class="program-tag">UI Design <span class="tag-count">8</span></div>
+                                    <div class="program-tag">User Research <span class="tag-count">3</span></div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Card 3 -->
+                        
                         <div class="opportunity-card">
                             <div class="card-header">
                                 <div class="company-info">
                                     <div class="company-logo">
-                                        <img src="https://placehold.co/40x40/ffcc00/000?text=EX&font=open-sans" alt="EXNESS">
+                                        <img src="https://via.placeholder.com/40" alt="Company Logo">
                                     </div>
-                                    <span class="company-name">EXNESS</span>
+                                    <div class="company-name">Your Company</div>
                                 </div>
                                 <div class="card-actions">
-                                    <button class="action-button"><i class="far fa-star"></i></button>
-                                    <button class="action-button"><i class="fas fa-ellipsis-v"></i></button>
+                                    <button class="action-button">
+                                        <i class="fas fa-star"></i>
+                                    </button>
+                                    <button class="action-button">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="badge">Campaign</div>
-                                <h3 class="program-title">Bug Bounty Program</h3>
-                                <p class="program-details">Retesting, Collaboration</p>
-                                
+                                <div class="badge">Entry Level</div>
+                                <h3 class="program-title">Junior Backend Developer</h3>
+                                <p class="program-details">San Francisco • Full-time • Posted 3 days ago</p>
                                 <div class="program-tags">
-                                    <span class="program-tag">Domain <span class="tag-count">10</span></span>
-                                    <span class="program-tag">OtherAsset <span class="tag-count">3</span></span>
-                                    <span class="program-tag">IosAppStore <span class="tag-count">3</span></span>
-                                    <span class="program-tag">AndroidPlayStore <span class="tag-count">2</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="opportunity-card">
-                            <div class="card-header">
-                                <div class="company-info">
-                                    <div class="company-logo">
-                                        <img src="https://placehold.co/40x40/ffcc00/fff?text=ML&font=open-sans" alt="MercadoLibre">
-                                    </div>
-                                    <span class="company-name">MercadoLibre</span>
-                                </div>
-                                <div class="card-actions">
-                                    <button class="action-button"><i class="far fa-star"></i></button>
-                                    <button class="action-button"><i class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="badge">Campaign</div>
-                                <h3 class="program-title">Bug Bounty Program</h3>
-                                <p class="program-details">Triaged by HackerOne, Retesting, Collaboration</p>
-                                
-                                <div class="program-tags">
-                                    <span class="program-tag">Wildcard <span class="tag-count">31</span></span>
-                                    <span class="program-tag">Domain <span class="tag-count">17</span></span>
-                                    <span class="program-tag">AndroidPlayStore <span class="tag-count">5</span></span>
-                                    <span class="program-tag">OtherAsset <span class="tag-count">4</span></span>
+                                    <div class="program-tag">Python <span class="tag-count">7</span></div>
+                                    <div class="program-tag">Django <span class="tag-count">4</span></div>
+                                    <div class="program-tag">SQL <span class="tag-count">5</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Create Job Posts Content -->
-                <div class="feature-content" id="create-job-posts-content" style="display: none;">
-                    <div class="main-header">
-                        <p class="subtitle">Create compelling job listings that attract top talent</p>
+                <div class="feature-content" id="job-posts-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Job Creator</div>
                         <h1 class="main-title">Create Job Posts</h1>
-                    </div>
-
+                    </header>
+                    
                     <div class="job-post-form">
                         <div class="form-section">
-                            <h3>Job Details</h3>
+                            <h3>Basic Information</h3>
                             <div class="form-group">
-                                <label>Job Title</label>
-                                <input type="text" placeholder="e.g. Senior Software Engineer">
+                                <label for="job-title">Job Title</label>
+                                <input type="text" id="job-title" placeholder="e.g. Senior Frontend Developer">
                             </div>
                             <div class="form-group">
-                                <label>Department</label>
-                                <select>
-                                    <option>Engineering</option>
-                                    <option>Design</option>
-                                    <option>Marketing</option>
-                                    <option>Sales</option>
-                                    <option>Customer Support</option>
+                                <label for="job-department">Department</label>
+                                <select id="job-department">
+                                    <option value="">Select Department</option>
+                                    <option value="engineering">Engineering</option>
+                                    <option value="design">Design</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="product">Product</option>
+                                    <option value="sales">Sales</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Location</label>
-                                <input type="text" placeholder="e.g. San Francisco, CA or Remote">
+                                <label for="job-type">Job Type</label>
+                                <select id="job-type">
+                                    <option value="">Select Job Type</option>
+                                    <option value="full-time">Full-time</option>
+                                    <option value="part-time">Part-time</option>
+                                    <option value="contract">Contract</option>
+                                    <option value="internship">Internship</option>
+                                    <option value="temporary">Temporary</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label>Employment Type</label>
-                                <select>
-                                    <option>Full-time</option>
-                                    <option>Part-time</option>
-                                    <option>Contract</option>
-                                    <option>Internship</option>
-                                </select>
+                                <label for="job-location">Location</label>
+                                <input type="text" id="job-location" placeholder="e.g. New York, NY or Remote">
                             </div>
                         </div>
-
+                        
                         <div class="form-section">
                             <h3>Job Description</h3>
                             <div class="form-group">
-                                <label>About the Role</label>
-                                <textarea rows="4" placeholder="Describe the role and responsibilities"></textarea>
+                                <label for="job-summary">Summary</label>
+                                <textarea id="job-summary" placeholder="Provide a brief summary of the role..."></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Requirements</label>
-                                <textarea rows="4" placeholder="List the skills and qualifications required"></textarea>
+                                <label for="job-responsibilities">Responsibilities</label>
+                                <textarea id="job-responsibilities" placeholder="List the key responsibilities for this role..."></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Benefits</label>
-                                <textarea rows="3" placeholder="Highlight the benefits and perks"></textarea>
+                                <label for="job-requirements">Requirements</label>
+                                <textarea id="job-requirements" placeholder="List the requirements for this role..."></textarea>
                             </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h3>AI Assistance</h3>
                             <div class="ai-assistance">
-                                <button class="ai-button"><i class="fas fa-magic"></i> Generate Job Description</button>
-                                <button class="ai-button"><i class="fas fa-check-circle"></i> Check for Bias</button>
-                                <button class="ai-button"><i class="fas fa-chart-line"></i> Predict Applicant Rate</button>
+                                <button class="ai-button">
+                                    <i class="fas fa-magic"></i> Generate Job Description
+                                </button>
+                                <button class="ai-button">
+                                    <i class="fas fa-check-circle"></i> Check for Bias
+                                </button>
+                                <button class="ai-button">
+                                    <i class="fas fa-chart-line"></i> Predict Applicant Rate
+                                </button>
                             </div>
                         </div>
-
+                        
+                        <div class="form-section">
+                            <h3>Compensation & Benefits</h3>
+                            <div class="form-group">
+                                <label for="job-salary">Salary Range</label>
+                                <input type="text" id="job-salary" placeholder="e.g. $80,000 - $100,000">
+                            </div>
+                            <div class="form-group">
+                                <label for="job-benefits">Benefits</label>
+                                <textarea id="job-benefits" placeholder="List the benefits offered for this position..."></textarea>
+                            </div>
+                        </div>
+                        
                         <div class="form-actions">
-                            <button class="action-button-secondary">Save Draft</button>
-                            <button class="action-button-primary">Publish Job</button>
+                            <button class="action-button-secondary">Save as Draft</button>
+                            <button class="action-button-primary">Post Job</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Candidate Matching Content -->
                 <div class="feature-content" id="candidate-matching-content" style="display: none;">
-                    <div class="main-header">
-                        <p class="subtitle">Let AI find the perfect candidates for your roles</p>
+                    <header class="main-header">
+                        <div class="subtitle">AI-Powered</div>
                         <h1 class="main-title">Candidate Matching</h1>
-                    </div>
-
+                    </header>
+                    
                     <div class="matching-container">
                         <div class="job-selector">
-                            <h3>Select a Job to Match</h3>
+                            <h3>Select a Job to Find Matches</h3>
                             <div class="job-select-box">
                                 <select id="job-selector">
-                                    <option value="">Choose a job posting</option>
-                                    <option value="1">Senior Software Engineer</option>
-                                    <option value="2">Product Designer</option>
-                                    <option value="3">Marketing Manager</option>
+                                    <option value="">Choose a Job Posting</option>
+                                    <option value="job1">Senior Frontend Developer</option>
+                                    <option value="job2">UX/UI Designer</option>
+                                    <option value="job3">Junior Backend Developer</option>
                                 </select>
                             </div>
                         </div>
-
+                        
                         <div class="matching-results">
                             <div class="match-stats">
                                 <div class="stat-card">
-                                    <div class="stat-number">28</div>
+                                    <div class="stat-number">47</div>
                                     <div class="stat-label">Total Matches</div>
                                 </div>
                                 <div class="stat-card">
                                     <div class="stat-number">12</div>
-                                    <div class="stat-label">Strong Matches</div>
+                                    <div class="stat-label">High Matches (>90%)</div>
                                 </div>
                                 <div class="stat-card">
-                                    <div class="stat-number">16</div>
-                                    <div class="stat-label">Partial Matches</div>
+                                    <div class="stat-number">23</div>
+                                    <div class="stat-label">Medium Matches</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">Low Matches</div>
                                 </div>
                             </div>
-
+                            
+                            <h3>Top Candidates</h3>
                             <div class="candidate-list">
                                 <div class="candidate-card">
                                     <div class="candidate-info">
                                         <div class="candidate-photo">
-                                            <img src="https://placehold.co/50x50/4fc2d6/0a1921?text=JS&font=open-sans" alt="Candidate">
+                                            <img src="https://via.placeholder.com/50" alt="Candidate Photo">
                                         </div>
                                         <div class="candidate-details">
-                                            <h4>Jane Smith</h4>
-                                            <p>Software Engineer, 5 years</p>
+                                            <h4>Sarah Johnson</h4>
+                                            <p>5 years experience • React, TypeScript, JavaScript</p>
+                                        </div>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="match-percentage">95%</div>
+                                        <div class="match-label">Match</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="candidate-card">
+                                    <div class="candidate-info">
+                                        <div class="candidate-photo">
+                                            <img src="https://via.placeholder.com/50" alt="Candidate Photo">
+                                        </div>
+                                        <div class="candidate-details">
+                                            <h4>Michael Chen</h4>
+                                            <p>7 years experience • React, Redux, JavaScript</p>
                                         </div>
                                     </div>
                                     <div class="match-score">
@@ -415,35 +469,19 @@
                                         <div class="match-label">Match</div>
                                     </div>
                                 </div>
-
+                                
                                 <div class="candidate-card">
                                     <div class="candidate-info">
                                         <div class="candidate-photo">
-                                            <img src="https://placehold.co/50x50/333/fff?text=MD&font=open-sans" alt="Candidate">
+                                            <img src="https://via.placeholder.com/50" alt="Candidate Photo">
                                         </div>
                                         <div class="candidate-details">
-                                            <h4>Mike Davis</h4>
-                                            <p>Senior Developer, 8 years</p>
+                                            <h4>Emily Rodriguez</h4>
+                                            <p>4 years experience • React, Node.js, TypeScript</p>
                                         </div>
                                     </div>
                                     <div class="match-score">
                                         <div class="match-percentage">88%</div>
-                                        <div class="match-label">Match</div>
-                                    </div>
-                                </div>
-
-                                <div class="candidate-card">
-                                    <div class="candidate-info">
-                                        <div class="candidate-photo">
-                                            <img src="https://placehold.co/50x50/ffcc00/000?text=AR&font=open-sans" alt="Candidate">
-                                        </div>
-                                        <div class="candidate-details">
-                                            <h4>Anna Rodriguez</h4>
-                                            <p>Full Stack Developer, 6 years</p>
-                                        </div>
-                                    </div>
-                                    <div class="match-score">
-                                        <div class="match-percentage">85%</div>
                                         <div class="match-label">Match</div>
                                     </div>
                                 </div>
@@ -454,104 +492,96 @@
 
                 <!-- Filter by Skill & Location Content -->
                 <div class="feature-content" id="filter-skills-content" style="display: none;">
-                    <div class="main-header">
-                        <p class="subtitle">Find candidates with the exact skills and location you need</p>
+                    <header class="main-header">
+                        <div class="subtitle">Advanced Search</div>
                         <h1 class="main-title">Filter by Skill & Location</h1>
-                    </div>
-
+                    </header>
+                    
                     <div class="filter-container">
                         <div class="filter-section">
-                            <h3>Skills</h3>
+                            <h3>Select Skills</h3>
                             <div class="skill-selector">
-                                <input type="text" placeholder="Search for skills" class="skill-search">
+                                <input type="text" class="skill-search" placeholder="Search for a skill...">
                                 <div class="selected-skills">
                                     <div class="skill-tag">JavaScript <i class="fas fa-times"></i></div>
                                     <div class="skill-tag">React <i class="fas fa-times"></i></div>
-                                    <div class="skill-tag">Node.js <i class="fas fa-times"></i></div>
                                 </div>
                                 <div class="skill-suggestions">
+                                    <div class="skill-option">HTML <i class="fas fa-plus"></i></div>
+                                    <div class="skill-option">CSS <i class="fas fa-plus"></i></div>
+                                    <div class="skill-option">Node.js <i class="fas fa-plus"></i></div>
                                     <div class="skill-option">TypeScript <i class="fas fa-plus"></i></div>
-                                    <div class="skill-option">MongoDB <i class="fas fa-plus"></i></div>
-                                    <div class="skill-option">GraphQL <i class="fas fa-plus"></i></div>
-                                    <div class="skill-option">Express.js <i class="fas fa-plus"></i></div>
+                                    <div class="skill-option">Redux <i class="fas fa-plus"></i></div>
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="filter-section">
                             <h3>Location</h3>
                             <div class="location-filter">
                                 <div class="form-group">
-                                    <label>Country</label>
-                                    <select id="country-select">
-                                        <option value="">All Countries</option>
-                                        <option value="us">United States</option>
-                                        <option value="ca">Canada</option>
-                                        <option value="uk">United Kingdom</option>
-                                    </select>
+                                    <label for="location-input">City, State, or Country</label>
+                                    <input type="text" id="location-input" placeholder="e.g. New York, NY">
                                 </div>
-                                
-                                <div class="form-group">
-                                    <label>City</label>
-                                    <input type="text" placeholder="City name">
-                                </div>
-                                
                                 <div class="form-group">
                                     <label>Remote Options</label>
                                     <div class="checkbox-group">
                                         <label class="checkbox-label">
-                                            <input type="checkbox" checked> On-site
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" checked> Remote
+                                            <input type="checkbox"> Remote Only
                                         </label>
                                         <label class="checkbox-label">
                                             <input type="checkbox"> Hybrid
                                         </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> On-Site
+                                        </label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="radius-input">Distance (miles)</label>
+                                    <input type="number" id="radius-input" placeholder="25">
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="filter-actions">
-                            <button class="filter-button-secondary">Reset Filters</button>
+                            <button class="filter-button-secondary">Clear Filters</button>
                             <button class="filter-button-primary">Apply Filters</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Manage Applications Content -->
-                <div class="feature-content" id="manage-applications-content" style="display: none;">
-                    <div class="main-header">
-                        <p class="subtitle">Track and process all your candidate applications in one place</p>
+                <div class="feature-content" id="applications-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Application Tracking</div>
                         <h1 class="main-title">Manage Applications</h1>
-                    </div>
-
+                    </header>
+                    
                     <div class="applications-container">
                         <div class="applications-toolbar">
                             <div class="search-applications">
                                 <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Search applications">
+                                <input type="text" placeholder="Search applications...">
                             </div>
                             <div class="applications-filters">
-                                <select>
-                                    <option>All Jobs</option>
-                                    <option>Software Engineer</option>
-                                    <option>Product Designer</option>
-                                    <option>Marketing Manager</option>
+                                <select id="job-filter">
+                                    <option value="">All Jobs</option>
+                                    <option value="job1">Senior Frontend Developer</option>
+                                    <option value="job2">UX/UI Designer</option>
+                                    <option value="job3">Junior Backend Developer</option>
                                 </select>
-                                <select>
-                                    <option>All Statuses</option>
-                                    <option>New</option>
-                                    <option>Screening</option>
-                                    <option>Interview</option>
-                                    <option>Offer</option>
-                                    <option>Hired</option>
-                                    <option>Rejected</option>
+                                <select id="status-filter">
+                                    <option value="">All Statuses</option>
+                                    <option value="new">New</option>
+                                    <option value="screening">Screening</option>
+                                    <option value="interview">Interview</option>
+                                    <option value="offer">Offer</option>
+                                    <option value="rejected">Rejected</option>
                                 </select>
                             </div>
                         </div>
-
+                        
                         <div class="applications-table">
                             <table>
                                 <thead>
@@ -560,6 +590,7 @@
                                         <th>Job</th>
                                         <th>Applied</th>
                                         <th>Status</th>
+                                        <th>Last Activity</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -567,63 +598,66 @@
                                     <tr>
                                         <td>
                                             <div class="candidate-cell">
-                                                <img src="https://placehold.co/40x40/4fc2d6/0a1921?text=RB&font=open-sans" alt="Candidate">
+                                                <img src="https://via.placeholder.com/40" alt="Candidate">
                                                 <div>
-                                                    <div class="candidate-name">Richard Brown</div>
-                                                    <div class="candidate-email">richard.b@example.com</div>
+                                                    <div class="candidate-name">John Smith</div>
+                                                    <div class="candidate-email">john.smith@example.com</div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>Software Engineer</td>
-                                        <td>Apr 12, 2023</td>
-                                        <td><span class="status-badge status-screening">Screening</span></td>
+                                        <td>Senior Frontend Developer</td>
+                                        <td>Apr 15, 2023</td>
+                                        <td><span class="status-badge status-new">New</span></td>
+                                        <td>Resume received</td>
                                         <td>
                                             <div class="table-actions">
-                                                <button><i class="fas fa-eye"></i></button>
-                                                <button><i class="fas fa-edit"></i></button>
-                                                <button><i class="fas fa-envelope"></i></button>
+                                                <button title="View Profile"><i class="fas fa-eye"></i></button>
+                                                <button title="Send Email"><i class="fas fa-envelope"></i></button>
+                                                <button title="More Options"><i class="fas fa-ellipsis-v"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="candidate-cell">
-                                                <img src="https://placehold.co/40x40/333/fff?text=ST&font=open-sans" alt="Candidate">
+                                                <img src="https://via.placeholder.com/40" alt="Candidate">
                                                 <div>
-                                                    <div class="candidate-name">Sarah Thompson</div>
-                                                    <div class="candidate-email">sarah.t@example.com</div>
+                                                    <div class="candidate-name">Lisa Johnson</div>
+                                                    <div class="candidate-email">lisa.johnson@example.com</div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>Product Designer</td>
+                                        <td>UX/UI Designer</td>
                                         <td>Apr 10, 2023</td>
-                                        <td><span class="status-badge status-interview">Interview</span></td>
+                                        <td><span class="status-badge status-screening">Screening</span></td>
+                                        <td>Phone screening scheduled</td>
                                         <td>
                                             <div class="table-actions">
-                                                <button><i class="fas fa-eye"></i></button>
-                                                <button><i class="fas fa-edit"></i></button>
-                                                <button><i class="fas fa-envelope"></i></button>
+                                                <button title="View Profile"><i class="fas fa-eye"></i></button>
+                                                <button title="Send Email"><i class="fas fa-envelope"></i></button>
+                                                <button title="More Options"><i class="fas fa-ellipsis-v"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="candidate-cell">
-                                                <img src="https://placehold.co/40x40/ffcc00/000?text=JL&font=open-sans" alt="Candidate">
+                                                <img src="https://via.placeholder.com/40" alt="Candidate">
                                                 <div>
-                                                    <div class="candidate-name">James Lee</div>
-                                                    <div class="candidate-email">james.l@example.com</div>
+                                                    <div class="candidate-name">Robert Williams</div>
+                                                    <div class="candidate-email">robert.williams@example.com</div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>Marketing Manager</td>
-                                        <td>Apr 8, 2023</td>
-                                        <td><span class="status-badge status-offer">Offer</span></td>
+                                        <td>Junior Backend Developer</td>
+                                        <td>Apr 5, 2023</td>
+                                        <td><span class="status-badge status-interview">Interview</span></td>
+                                        <td>Technical interview completed</td>
                                         <td>
                                             <div class="table-actions">
-                                                <button><i class="fas fa-eye"></i></button>
-                                                <button><i class="fas fa-edit"></i></button>
-                                                <button><i class="fas fa-envelope"></i></button>
+                                                <button title="View Profile"><i class="fas fa-eye"></i></button>
+                                                <button title="Send Email"><i class="fas fa-envelope"></i></button>
+                                                <button title="More Options"><i class="fas fa-ellipsis-v"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -634,12 +668,12 @@
                 </div>
 
                 <!-- Interview Scheduler Content -->
-                <div class="feature-content" id="interview-scheduler-content" style="display: none;">
-                    <div class="main-header">
-                        <p class="subtitle">Easily schedule and manage candidate interviews</p>
+                <div class="feature-content" id="interviews-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Schedule & Manage</div>
                         <h1 class="main-title">Interview Scheduler</h1>
-                    </div>
-
+                    </header>
+                    
                     <div class="scheduler-container">
                         <div class="calendar-section">
                             <div class="calendar-header">
@@ -669,19 +703,19 @@
                                     <div>3</div>
                                     <div>4</div>
                                     <div>5</div>
-                                    <div>6</div>
+                                    <div class="has-events">6</div>
                                     <div>7</div>
                                     <div>8</div>
-                                    <div>9</div>
+                                    <div class="has-events">9</div>
                                     <div>10</div>
                                     <div>11</div>
                                     <div>12</div>
                                     <div>13</div>
                                     <div>14</div>
-                                    <div>15</div>
-                                    <div class="current-day has-events">16</div>
-                                    <div class="has-events">17</div>
-                                    <div>18</div>
+                                    <div class="current-day has-events">15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div class="has-events">18</div>
                                     <div>19</div>
                                     <div>20</div>
                                     <div>21</div>
@@ -703,77 +737,366 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="interviews-list">
-                            <h3>Upcoming Interviews</h3>
+                            <h3>Today's Interviews</h3>
                             <div class="interview-card">
                                 <div class="interview-time">
-                                    <div class="interview-date">Apr 16</div>
+                                    <div class="interview-date">Apr 15</div>
                                     <div class="interview-hour">10:00 AM</div>
                                 </div>
                                 <div class="interview-info">
-                                    <h4>Technical Interview: Sarah Thompson</h4>
-                                    <p>Product Designer • Round 2</p>
+                                    <h4>Technical Interview: John Smith</h4>
+                                    <p>Senior Frontend Developer position • 1 hour</p>
                                     <div class="interview-participants">
-                                        <span>With: </span>
-                                        <img src="https://placehold.co/30x30/4fc2d6/0a1921?text=JD&font=open-sans" alt="Interviewer">
-                                        <img src="https://placehold.co/30x30/333/fff?text=ML&font=open-sans" alt="Interviewer">
+                                        <span>Interviewers:</span>
+                                        <img src="https://via.placeholder.com/30" alt="Interviewer">
+                                        <img src="https://via.placeholder.com/30" alt="Interviewer">
                                     </div>
                                 </div>
                                 <div class="interview-actions">
-                                    <button class="interview-action"><i class="fas fa-video"></i></button>
-                                    <button class="interview-action"><i class="fas fa-edit"></i></button>
-                                    <button class="interview-action"><i class="fas fa-trash"></i></button>
+                                    <button class="interview-action" title="Edit Interview"><i class="fas fa-edit"></i></button>
+                                    <button class="interview-action" title="Join Call"><i class="fas fa-video"></i></button>
+                                    <button class="interview-action" title="Cancel"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
-
+                            
                             <div class="interview-card">
                                 <div class="interview-time">
-                                    <div class="interview-date">Apr 16</div>
-                                    <div class="interview-hour">2:30 PM</div>
+                                    <div class="interview-date">Apr 15</div>
+                                    <div class="interview-hour">2:00 PM</div>
                                 </div>
                                 <div class="interview-info">
-                                    <h4>Final Round: James Lee</h4>
-                                    <p>Marketing Manager • Round 3</p>
+                                    <h4>Cultural Interview: Robert Williams</h4>
+                                    <p>Junior Backend Developer position • 45 minutes</p>
                                     <div class="interview-participants">
-                                        <span>With: </span>
-                                        <img src="https://placehold.co/30x30/4fc2d6/0a1921?text=JD&font=open-sans" alt="Interviewer">
-                                        <img src="https://placehold.co/30x30/333/fff?text=ML&font=open-sans" alt="Interviewer">
-                                        <img src="https://placehold.co/30x30/ffcc00/000?text=PK&font=open-sans" alt="Interviewer">
+                                        <span>Interviewers:</span>
+                                        <img src="https://via.placeholder.com/30" alt="Interviewer">
                                     </div>
                                 </div>
                                 <div class="interview-actions">
-                                    <button class="interview-action"><i class="fas fa-video"></i></button>
-                                    <button class="interview-action"><i class="fas fa-edit"></i></button>
-                                    <button class="interview-action"><i class="fas fa-trash"></i></button>
+                                    <button class="interview-action" title="Edit Interview"><i class="fas fa-edit"></i></button>
+                                    <button class="interview-action" title="Join Call"><i class="fas fa-video"></i></button>
+                                    <button class="interview-action" title="Cancel"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
-
-                            <div class="interview-card">
+                            
+                            <div class="schedule-actions">
+                                <button class="schedule-button-primary">
+                                    <i class="fas fa-plus"></i> Schedule New Interview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notifications Content -->
+                <div class="feature-content" id="notifications-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Stay Updated</div>
+                        <h1 class="main-title">Notifications</h1>
+                    </header>
+                    
+                    <div class="applications-container">
+                        <div class="applications-toolbar">
+                            <div class="search-applications">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search notifications...">
+                            </div>
+                            <div class="applications-filters">
+                                <select id="notification-type">
+                                    <option value="">All Types</option>
+                                    <option value="application">Applications</option>
+                                    <option value="interview">Interviews</option>
+                                    <option value="system">System</option>
+                                </select>
+                                <select id="notification-status">
+                                    <option value="">All Statuses</option>
+                                    <option value="read">Read</option>
+                                    <option value="unread">Unread</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="notifications-list">
+                            <div class="interview-card" style="background-color: rgba(13, 110, 253, 0.05);">
                                 <div class="interview-time">
-                                    <div class="interview-date">Apr 17</div>
-                                    <div class="interview-hour">11:00 AM</div>
+                                    <div class="interview-date">Today</div>
+                                    <div class="interview-hour">10:45 AM</div>
                                 </div>
                                 <div class="interview-info">
-                                    <h4>Technical Interview: Richard Brown</h4>
-                                    <p>Software Engineer • Round 1</p>
-                                    <div class="interview-participants">
-                                        <span>With: </span>
-                                        <img src="https://placehold.co/30x30/333/fff?text=ML&font=open-sans" alt="Interviewer">
-                                        <img src="https://placehold.co/30x30/ffcc00/000?text=PK&font=open-sans" alt="Interviewer">
-                                    </div>
+                                    <h4>New application received</h4>
+                                    <p>Sarah Johnson applied for Senior Frontend Developer</p>
                                 </div>
                                 <div class="interview-actions">
-                                    <button class="interview-action"><i class="fas fa-video"></i></button>
-                                    <button class="interview-action"><i class="fas fa-edit"></i></button>
-                                    <button class="interview-action"><i class="fas fa-trash"></i></button>
+                                    <button class="interview-action" title="Mark as Read"><i class="fas fa-check"></i></button>
+                                    <button class="interview-action" title="View Details"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="interview-card" style="background-color: rgba(13, 110, 253, 0.05);">
+                                <div class="interview-time">
+                                    <div class="interview-date">Today</div>
+                                    <div class="interview-hour">9:30 AM</div>
+                                </div>
+                                <div class="interview-info">
+                                    <h4>Interview reminder</h4>
+                                    <p>Technical interview with John Smith at 10:00 AM</p>
+                                </div>
+                                <div class="interview-actions">
+                                    <button class="interview-action" title="Mark as Read"><i class="fas fa-check"></i></button>
+                                    <button class="interview-action" title="View Details"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="interview-card">
+                                <div class="interview-time">
+                                    <div class="interview-date">Yesterday</div>
+                                    <div class="interview-hour">3:15 PM</div>
+                                </div>
+                                <div class="interview-info">
+                                    <h4>Job post expiring soon</h4>
+                                    <p>UX/UI Designer job post will expire in 3 days</p>
+                                </div>
+                                <div class="interview-actions">
+                                    <button class="interview-action" title="View Details"><i class="fas fa-eye"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="schedule-actions">
-                        <button class="schedule-button-primary"><i class="fas fa-plus"></i> Schedule New Interview</button>
+                </div>
+                
+                <!-- Analytics Content -->
+                <div class="feature-content" id="analytics-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Hiring Insights</div>
+                        <h1 class="main-title">Analytics</h1>
+                    </header>
+                    
+                    <div class="analytics-container search-container">
+                        <div class="filter-group" style="margin-bottom: 20px;">
+                            <div class="filter-dropdown">
+                                <span>Date Range</span>
+                                <button class="dropdown-toggle">
+                                    Last 30 Days
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="filter-dropdown">
+                                <span>Jobs</span>
+                                <button class="dropdown-toggle">
+                                    All Jobs
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="match-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">1,245</div>
+                                <div class="stat-label">Total Applications</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">42</div>
+                                <div class="stat-label">Interviews Conducted</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Offers Extended</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">6</div>
+                                <div class="stat-label">Positions Filled</div>
+                            </div>
+                        </div>
+                        
+                        <div style="height: 300px; background-color: #f8f9fa; margin: 20px 0; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+                            <p style="color: #6c757d;">Analytics charts would display here</p>
+                        </div>
+                        
+                        <div style="height: 250px; background-color: #f8f9fa; margin: 20px 0; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+                            <p style="color: #6c757d;">Conversion funnel would display here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bookmarks Content -->
+                <div class="feature-content" id="bookmarks-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Saved Items</div>
+                        <h1 class="main-title">Bookmarks</h1>
+                    </header>
+                    
+                    <div class="search-container">
+                        <div class="applications-toolbar">
+                            <div class="search-applications">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search bookmarks...">
+                            </div>
+                            <div class="applications-filters">
+                                <select id="bookmark-type">
+                                    <option value="">All Types</option>
+                                    <option value="candidates">Candidates</option>
+                                    <option value="jobs">Jobs</option>
+                                    <option value="searches">Saved Searches</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="section-header" style="margin-top: 20px;">
+                            <h2>Saved Candidates</h2>
+                        </div>
+                        
+                        <div class="candidate-list">
+                            <div class="candidate-card">
+                                <div class="candidate-info">
+                                    <div class="candidate-photo">
+                                        <img src="https://via.placeholder.com/50" alt="Candidate Photo">
+                                    </div>
+                                    <div class="candidate-details">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>Senior Frontend Developer • Saved 3 days ago</p>
+                                    </div>
+                                </div>
+                                <div class="table-actions">
+                                    <button title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button title="Remove Bookmark"><i class="fas fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="candidate-card">
+                                <div class="candidate-info">
+                                    <div class="candidate-photo">
+                                        <img src="https://via.placeholder.com/50" alt="Candidate Photo">
+                                    </div>
+                                    <div class="candidate-details">
+                                        <h4>Michael Chen</h4>
+                                        <p>UX/UI Designer • Saved 1 week ago</p>
+                                    </div>
+                                </div>
+                                <div class="table-actions">
+                                    <button title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button title="Remove Bookmark"><i class="fas fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="section-header" style="margin-top: 30px;">
+                            <h2>Saved Jobs</h2>
+                        </div>
+                        
+                        <div class="cards-container" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+                            <div class="opportunity-card">
+                                <div class="card-header">
+                                    <div class="company-info">
+                                        <div class="company-logo">
+                                            <img src="https://via.placeholder.com/40" alt="Company Logo">
+                                        </div>
+                                        <div class="company-name">Your Company</div>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="action-button">
+                                            <i class="fas fa-star"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="badge">Senior Level</div>
+                                    <h3 class="program-title">Senior Frontend Developer</h3>
+                                    <p class="program-details">Remote • Full-time • Posted 2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Settings Content -->
+                <div class="feature-content" id="settings-content" style="display: none;">
+                    <header class="main-header">
+                        <div class="subtitle">Configuration</div>
+                        <h1 class="main-title">Settings</h1>
+                    </header>
+                    
+                    <div class="job-post-form">
+                        <div class="form-section">
+                            <h3>Company Profile</h3>
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" value="Your Company">
+                            </div>
+                            <div class="form-group">
+                                <label for="company-website">Website</label>
+                                <input type="text" id="company-website" value="https://yourcompany.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="company-industry">Industry</label>
+                                <select id="company-industry">
+                                    <option value="technology">Technology</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="education">Education</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-size">Company Size</label>
+                                <select id="company-size">
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-500">201-500 employees</option>
+                                    <option value="501-1000">501-1000 employees</option>
+                                    <option value="1001+">1001+ employees</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Email Notifications</h3>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> New applications
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> Interview reminders
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> Job post expiring
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> Weekly hiring summary
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Account Security</h3>
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="action-button-secondary">Cancel</button>
+                            <button class="action-button-primary">Save Changes</button>
+                        </div>
                     </div>
                 </div>
             </div>
